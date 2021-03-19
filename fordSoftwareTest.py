@@ -3,7 +3,6 @@
 #Purpose: Ford Software Programming Assessment, a gui that accepts a user integer input, and... 
 #outputs either Mustang if that input is divisible by 3, Bronco if it is divisible by 5, MustangBronco if it is divisible by both, or just that integer if it is divisible by neither
 import tkinter as tk
-import unittest
 class mustangBroncoGUI():
     
     def __init__(self):
@@ -37,7 +36,7 @@ class mustangBroncoGUI():
         elif user_input % 3 == 0:
             self.output['text'] = "Mustang"
         elif user_input % 5 == 0:
-            self.output['text'] = "Mustang"
+            self.output['text'] = "Bronco"
         else:
             self.output['text'] = user_input
             
