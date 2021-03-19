@@ -1,7 +1,7 @@
 class mustangBroncoTest():
     def __init__(self):
         print("check")
-        if self.Test1() and self.Test2() and self.Test3() and self.Test4() and self.Test5() and self.Test6() and self.Test7() and self.Test8() and self.Test9() and self.TestA() and self.TestB():
+        if self.Test1() and self.Test2() and self.Test3() and self.Test4() and self.Test5() and self.Test6() and self.Test7() and self.Test8() and self.Test9() and self.TestA() and self.TestB() and self.TestC():
             print("Internal test cases passed")
     def Test1(self):
         return mustangBroncoLogic("0") == "MustangBronco"
@@ -25,6 +25,8 @@ class mustangBroncoTest():
         return mustangBroncoLogic("15") == "MustangBronco" 
     def TestB(self):
         return mustangBroncoLogic("-15") == "MustangBronco"
+    def TestC(self):
+        return mustangBroncoLogic("17.0") == "ERROR: Invalid input (potentially non-integer), please try again"
         
         
         
@@ -33,7 +35,7 @@ def mustangBroncoLogic(user_input):
             user_input = int(user_input)
         except ValueError:
             output = "ERROR: Invalid input (potentially non-integer), please try again"
-            return
+            return output
         if (user_input % 3 == 0) and (user_input % 5 == 0):
             output = "MustangBronco"
         elif user_input % 3 == 0:
@@ -46,3 +48,4 @@ def mustangBroncoLogic(user_input):
         
         
 mustangBroncoTest()
+
